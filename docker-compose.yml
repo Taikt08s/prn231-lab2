@@ -2,9 +2,8 @@ version: '3.8'
 services:
   odatabookstore:
     build:
-      context: .
-      dockerfile: ODataBookStore/Dockerfile
-      target: final
+      context: ./ODataBookStore
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
@@ -12,9 +11,8 @@ services:
 
   odatabookstorewebclient:
     build:
-      context: .
-      dockerfile: ODataBookStoreWebClient/Dockerfile
-      target: final
+      context: ./ODataBookStoreWebClient
+      dockerfile: Dockerfile
     ports:
       - "8081:8081"
     environment:
